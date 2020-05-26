@@ -3,61 +3,21 @@
     <head>
         <title>DMS Ajmer</title>
         <link href="styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <script src="main.js"></script>
     </head>
     <body>
         <div class="loginBox">
         <h2><center>Login Here</center></h2>
-        <form role="form" name="contact_form">
-  <div class="col-xs-4">
-    <div class="form-group">
-      <input type="text" class="form-control" id="input_name" name="Name" placeholder="Name">
-    </div>
-    <div class="form-group">
-      <input type="email" class="form-control" id="input_email" name="Email" placeholder="Email">
-    </div>
-    <div class="form-group">
-      <input type="tel" class="form-control" id="input_phone" name="Phone" placeholder="Phone">
-    </div>
-    <div class="form-group">
-      <input type="tel" class="form-control" id="input_location" name="Location" placeholder="Location">
-    </div>
-  </div>
-  <div class="col-xs-6">
-    <div class="form-group">
-      <textarea class="form-control"  id="contact_comment" name="Comment" placeholder="
-
-
-
-Details or comments?" rows="10"></textarea>
-    </div>
-  </div>
-<div class="col-xs-2">
-    <div class="form-group">
-      <button id="submit_button"type="submit" class="btn btn-primary" onclick="submit_comment()">Submit</button>
-    </div>
-  </div>
-</form>
+        <form>
+            <p>Username<br>
+            <input type="text" id="ust" Placeholder="username" required></p>
+            <p>Password<br>
+            <input type="password" id="kst"  Placeholder="Password" required>
+            <button type="button" onclick="condition()">Submit</button></p> 
+        </form>
     </div>
         <div class="copyright">
             &copy;  All rights reserved.
         </div>
-        <script>
-        	function sendMail(str) {
-    var link = "mailto:beast.lang.17@gmail.com" + "&subject=" + escape("This is my subject") + "&body=" + escape(str);
-    location.href = link;
-}
-function submit_comment() {
-var name = document.forms["contact_form"]["Name"].value;
-var Email = document.forms["contact_form"]["Email"].value;
-var Phone = document.forms["contact_form"]["Phone"].value;
-var Location = document.forms["contact_form"]["Location"].value;
-var Comment = document.forms["contact_form"]["Location"].value;
-if((name !="") && (Email !="") && (Phone !="") && (Location !="") && (Comment !="")) {
-   sendMail("HELLO");
-}
-}
-        </script>
     </body>
 </html>
